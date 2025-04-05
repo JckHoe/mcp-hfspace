@@ -17,7 +17,7 @@ This fork aims to provide custom functionality to this MCP server to HF to allow
       "command": "npx",
       "args": [
         "-y",
-        "@llmindset/mcp-hfspace"
+        "github:jckhoe/mcp-hfspace"
       ]
     }
 ```
@@ -35,7 +35,7 @@ Disabling the File export step
       "command": "npx",
       "args": [
         "-y",
-        "@llmindset/mcp-hfspace"
+        "github:jckhoe/mcp-hfspace"
         "--export-mode=None",
       ]
     }
@@ -44,6 +44,10 @@ Disabling the File export step
 Please make sure you are using Claude Desktop 0.78 or greater.
 
 This will get you started with an Image Generator.
+
+---
+
+# Content from Orignal Fork
 
 ### Basic setup
 
