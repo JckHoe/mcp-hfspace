@@ -7,7 +7,7 @@ import { ApiReturn } from "./gradio_api.js";
 import * as fs from "fs/promises";
 import { pathToFileURL } from "url";
 import path from "path";
-import { config } from "./config.js";
+import { config, ExportMode } from "./config.js";
 import { EndpointPath } from "./endpoint_wrapper.js";
 import { WorkingDirectory } from "./working_directory.js";
 
@@ -96,6 +96,10 @@ export class GradioConverter {
     mcpToolName: string,
     originalExtension?: string | null,
   ): Promise<string> {
+    if (config.exportMode != ExportMode.FileBased) {
+      return "";
+    }
+
     const extension = originalExtension || mimeType.split("/")[1] || "bin";
     const filename = await this.workingDir.generateFilename(
       prefix,
