@@ -1,7 +1,7 @@
 {
-  "name": "@llmindset/mcp-hfspace",
+  "name": "@jckhoe/mcp-hfspace",
   "version": "0.5.1",
-  "description": "MCP Server to connect to Hugging Face spaces. Simple configuration, Claude Desktop friendly.",
+  "description": "Forked version of MCP Server to connect to Hugging Face spaces. Simple configuration, Claude Desktop friendly.",
   "type": "module",
   "publishConfig": {
     "access": "public"
@@ -14,10 +14,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/evalstate/mcp-hfspace"
+    "url": "git+https://github.com/jckhoe/mcp-hfspace"
   },
   "bugs": {
-    "url": "https://github.com/evalstate/mcp-hfspace/issues"
+    "url": "https://github.com/jckhoe/mcp-hfspace/issues"
   },
   "engines": {
     "node": ">=18",
