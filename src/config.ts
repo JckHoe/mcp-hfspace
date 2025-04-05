@@ -7,8 +7,11 @@ export enum ExportMode {
   None = "None",
 }
 
-function isExportMode(value: any): value is ExportMode {
-  return Object.values(ExportMode).includes(value);
+function isExportMode(value: unknown): value is ExportMode {
+  return (
+    typeof value === "string" &&
+    Object.values(ExportMode).includes(value as ExportMode)
+  );
 }
 
 export interface Config {
