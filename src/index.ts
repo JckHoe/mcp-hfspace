@@ -219,6 +219,7 @@ server.setRequestHandler(ReadResourceRequestSchema, async (request) => {
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
+  console.info("Server Started");
 }
 
 main().catch((error) => {
