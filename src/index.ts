@@ -75,18 +75,19 @@ if (endpoints.size === 0) {
 server.setRequestHandler(ListToolsRequestSchema, async () => {
   return {
     tools: [
-      {
-        name: AVAILABLE_FILES,
-        description:
-          "A list of available file and resources. " +
-          "If the User requests things like 'most recent image' or 'the audio' use " +
-          "this tool to identify the intended resource." +
-          "This tool returns 'resource uri', 'name', 'size', 'last modified'  and 'mime type' in a markdown table",
-        inputSchema: {
-          type: "object",
-          properties: {},
-        },
-      },
+      // Disable not used tool
+      // {
+      //   name: AVAILABLE_FILES,
+      //   description:
+      //     "A list of available file and resources. " +
+      //     "If the User requests things like 'most recent image' or 'the audio' use " +
+      //     "this tool to identify the intended resource." +
+      //     "This tool returns 'resource uri', 'name', 'size', 'last modified'  and 'mime type' in a markdown table",
+      //   inputSchema: {
+      //     type: "object",
+      //     properties: {},
+      //   },
+      // },
       ...Array.from(endpoints.values()).map((endpoint) =>
         endpoint.toolDefinition(),
       ),
